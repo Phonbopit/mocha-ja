@@ -17,4 +17,14 @@ describe('Simple Payments', function() {
     expect(cash.getChange(234, 1000)).to.deep.equal([500, 100, 100, 50, 10, 5, 1]);
   });
 
+  it('getChange(11, 1000) should return [500, 100, 100, 100, 100, 50, 20, 10, 5, 2, 2]', function() {
+    expect(cash.getChange(11, 1000))
+      .to.deep.equal([500, 100, 100, 100, 100, 50, 20, 10, 5, 2, 2]);
+  });
+
+  it('getChange(12, 20) should return [5, 2, 1]', function() {
+    expect(cash.getChange(12, 20))
+      .to.deep.equal([5, 2, 1]);
+  })
+
 });

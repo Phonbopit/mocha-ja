@@ -10,11 +10,11 @@ Practical JavaScript Testing with Mocha + Chai
 
 ## How does it work?
 
-Install `mocha` and `chai` with :
+Install dependencies with :
 
 ```
 npm install mocha -g
-npm install chai --save-dev
+npm install chai istanbul chalk --save-dev
 ```
 
 Run test with :
@@ -22,6 +22,12 @@ Run test with :
 ```
 mocha
 mocha -w  ## watching mode
+```
+
+Run code coverage :
+
+```
+node_modules/.bin/istanbul cover _mocha -- -R spec
 ```
 
 Done!
