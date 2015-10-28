@@ -1,6 +1,9 @@
 var chalk = require('chalk');
 
 var coins = [1000, 500, 100, 50, 20, 10, 5, 2, 1];
+var numbers = ["หนึ่ง", "สอง", "สาม", "สี่", "ห้า", "หก", "เจ็ด", "แปด", "เก้า"];
+var digits = ["สิบ", "ร้อย", "พัน", "หมื่น", "แสน", "ล้าน"];
+
 var cash = {
 
   getChange: function(price, cashPaid) {
@@ -31,7 +34,17 @@ var cash = {
     return change;
   },
 
-  getText: function() {
+  getText: function(cash) {
+
+    var text = '';
+
+    var cashText = cash.toString();
+    var length = cashText.length;
+
+    text += numbers[cashText[0] - 1];
+    text += digits[length - 2];
+
+    return text + "บาท";
 
   }
 }

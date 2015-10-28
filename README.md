@@ -7,7 +7,8 @@ Practical JavaScript Testing with Mocha + Chai
 
 * Given **Total Price** and **Money from customer**, Return **Change to customer**
 * Unit available : 1, 2, 5, 10, 20, 50, 100, 500, 1000 (**Assume 20, 50, 100, 500, 1000 is coin**)
-* Transform number to Thai Text
+* Transform number to Thai Text (only baht)
+* TODO: Transform number to Thai Text with satang.
 
 ## How does it work?
 

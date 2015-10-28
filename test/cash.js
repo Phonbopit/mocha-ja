@@ -34,6 +34,30 @@ describe('Cash', function() {
       expect(cash).to.be.an('object');
       expect(cash.getText).to.be.a('function');
     });
+
+    it('getText(500) should say "ห้าร้อยบาท"', function() {
+      expect(cash.getText(500))
+        .to.equal('ห้าร้อยบาท');
+    });
+
+    it('getText(400) should say "สี่ร้อยบาท"', function() {
+      expect(cash.getText(400))
+        .to.equal("สี่ร้อยบาท");
+    });
+
+    xit('getText(5134) should say "ห้าพันหนึ่งร้อยสามสิบสี่บาท"', function() {
+
+    });
+
+    xit('getText(28) should say "ยี่สิบแปดบาท"', function() {
+
+    });
+
+    xit('getText(11) should say "สิบเอ็ดบาท"', function() {
+
+    });
+
+
   });
 
 });
