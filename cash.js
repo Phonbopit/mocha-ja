@@ -29,6 +29,10 @@ var cash = {
     }
 
     return change;
+  },
+
+  getText: function() {
+
   }
 }
 
