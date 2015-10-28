@@ -3,8 +3,9 @@ var cash = require('../cash.js');
 
 describe('Simple Payments', function() {
 
-  it('should pass', function() {
-      expect(2).to.equal(2);
+  it('should have getChange() method', function() {
+    expect(typeof(cash)).to.equal('object');
+    expect(typeof(cash.getChange)).to.equal('function');
   });
 
 });
